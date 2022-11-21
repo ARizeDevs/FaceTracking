@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="./main.css" />
+    <title>Arize Face Demo</title>
+    <meta charset="utf-8" />
+    <script
+      src="./node_modules/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/@mediapipe/control_utils/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/@mediapipe/face_mesh/face_mesh.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./node_modules/three/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <video class="input_video" playsinline loop style="display: none"></video>
+    <canvas class="output_canvas"></canvas>
+
+    <div class="navigation">
+      <button id="showGlasses">
+        <img src="/images/glasses.jpg" alt="" />
+      </button>
+      <button id="showMask">
+        <img src="/images/mask.jpg" alt="" />
+      </button>
+      <button id="showSunglasses">
+        <img src="/images/sunglasses.jpg" alt="" />
+      </button>
+    </div>
+
+    <script type="module" src="facecap.js"></script>
+  </body>
+</html>
