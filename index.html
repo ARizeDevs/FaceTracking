@@ -10,6 +10,11 @@
     <title>Arize Face Demo</title>
     <meta charset="utf-8" />
     <script
+      src="./node_modules/three/build/three.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
       src="./node_modules/@mediapipe/camera_utils/camera_utils.js"
       crossorigin="anonymous"
     ></script>
@@ -25,6 +30,57 @@
       src="./node_modules/@mediapipe/face_mesh/face_mesh.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="./node_modules/three/examples/js/controls/OrbitControls.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/three/examples/js/objects/Lensflare.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/three/examples/js/lines/LineSegments2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/three/examples/js/lines/LineSegmentsGeometry.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./triangulation.js" crossorigin="anonymous"></script>
+    <script
+      src="./node_modules/three/examples/js/lines/Line2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="./node_modules/three/examples/js/lines/LineGeometry.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/three/examples/js/lines/LineMaterial.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/three/examples/js/libs/meshopt_decoder.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/three/examples/js/loaders/GLTFLoader.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/three/examples/js/utils/WorkerPool.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/three/examples/js/loaders/KTX2Loader.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./node_modules/kalidokit/dist/kalidokit.umd.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script type="importmap">
       {
@@ -36,10 +92,12 @@
   </head>
 
   <body>
-    <video class="input_video" playsinline loop style="display: none"></video>
+    <button id="start-button" class="start-button">Start Face Tracking</button>
+
+    <!-- <video class="input_video" playsinline loop style="display: none"></video> -->
     <canvas class="output_canvas"></canvas>
 
-    <div class="navigation">
+    <div id="navigation" class="navigation" style="display: none">
       <button id="showGlasses">
         <img src="/images/glasses.jpg" alt="" />
       </button>
@@ -51,6 +109,6 @@
       </button>
     </div>
 
-    <script type="module" src="facecap.js"></script>
+    <script src="facecap.js"></script>
   </body>
 </html>
