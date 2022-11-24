@@ -141,3 +141,8 @@ select {
   padding-top: 20px;
   font-size: 25px;
 }
+
+canvas {
+  width: 720px !important;
+  height: 480px !important;
+}
