@@ -132,3 +132,12 @@ select {
   border-radius: 10px;
   font-weight: 700;
 }
+
+#stats {
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 900;
+  top: 0;
+  padding-top: 20px;
+  font-size: 25px;
+}

@@ -50,6 +50,9 @@ async function Run() {
   video.style.top = '50%';
   video.style.let = '50%';
 
+  const stats = document.getElementById('stats');
+  stats.innerHTML = `width: ${streamWidth}px; height: ${streamHeight}px`;
+
   video.playsInline = true;
   video.loop = true;
   video.muted = true;
